@@ -1,0 +1,10 @@
+streamlit
+pymongo
+python-dotenv
+bcrypt
+openai
+twilio
+requests
+altair
+numpy==1.26.4
+pandas==2.1.4
