@@ -28,9 +28,9 @@ def render(user_id):
             y=alt.Y(f"{metric}:Q", title=metric.replace('_', ' ').title()),
             tooltip=['date', metric]
         ).properties(width=500, height=200)
-        st.altair_chart(chart, width='stretch')
+        st.altair_chart(chart, use_container_width=True)
 
     # Show 30-day progression
     st.subheader("30-Day Overview")
     metrics = ['steps', 'calories', 'heart_rate', 'sleep_hours', 'water_intake']
-    st.dataframe(df[["date"] + metrics].sort_values('date', ascending=False), width='stretch')
+    st.dataframe(df[["date"] + metrics].sort_values('date', ascending=False), use_container_width=True)
